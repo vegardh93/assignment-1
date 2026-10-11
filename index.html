@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container site-header__content">
+    <header class="siteHeader">
+        <div class="container siteHeader__content">
             <!-- Logo -->
              <a>
                 <img src="./assets/rode-microphones-logo.webp" alt="Røde Microphones logo">
              </a>
             <!-- Navigation -->
-            <nav class="site-header__nav" aria-label="Main navigation">
+            <nav class="siteHeader__nav" aria-label="Main navigation">
                 <a href="./index.html">Product</a>
                 <a href="./index.html#details">Details</a>
                 <a href="./order.html">Order</a>
@@ -23,7 +23,7 @@
     </header>
     <main>
         <!-- Product Section -->
-         <section class="product">
+        <section class="product">
             <div class="container product__layout">
                 <!-- Product Gallery -->
                 <div class="product__gallery">
@@ -36,12 +36,20 @@
                         A versatile studio condenser microphone featuring both XLR and USB-C connectivity,
                         delivering exceptional sound quality for vocals, instruments, podcasts, and professional recordings.
                     </p>
-                    <p class="product__price">
-                        $299.00
-                    </p>
+                    <!-- Product Color Selection -->
+                    <fieldset class="product__colors">
+                        <legend>Choose a color</legend>
+                        <div class="product__colorOptions">
+                            <input type="radio" id="colorBlack" name="color" value="black" checked>
+                            <label for="colorBlack">Black</label>
+                            <input type="radio" id="colorSilver" name="color" value="silver">
+                            <label for="colorSilver">Silver</label>
+                        </div>
+                    </fieldset>
+                    <p class="product__price">$299.00</p>
                 </div>
             </div>
-         </section>
+        </section>
     </main>
 </body>
 </html>
