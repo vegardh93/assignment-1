@@ -73,7 +73,120 @@ img {
     color: var (--colorAccent)
 }
 
-/* Mobile */
+/* Product section */
+.product {
+    padding: 48px 0;
+}
+
+.product__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* Product gallery */
+.product__gallery {
+    min-width: 0;
+    align-self: center;
+}
+
+/* Hide all main images by default */
+.product__image {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Display the main image which corresponds to the selected thumbnail */
+.product__gallery:has(#blackProductOverview:checked) .product__image--blackProductOverview,
+.product__gallery:has(#blackMicrophoneWithAccessories:checked) .product__image--blackMicrophoneWithAccessories,
+.product__gallery:has(#blackMicrophoneSideView:checked) .product__image--blackMicrophoneSideView,
+.product__gallery:has(#blackMicrophoneAlternateView:checked) .product__image--blackMicrophoneAlternateView,
+.product__gallery:has(#blackMicrophoneShockMount:checked) .product__image--blackMicrophoneShockMount,
+.product__gallery:has(#blackMicrophonePopFilter:checked) .product__image--blackMicrophonePopFilter,
+.product__gallery:has(#blackMicrophoneConnections:checked) .product__image--blackMicrophoneConnections,
+.product__gallery:has(#silverProductOverview:checked) .product__image--silverProductOverview,
+.product__gallery:has(#silverMicrophoneWithAccessories:checked) .product__image--silverMicrophoneWithAccessories,
+.product__gallery:has(#silverMicrophoneSideView:checked) .product__image--silverMicrophoneSideView,
+.product__gallery:has(#silverMicrophoneAlternateView:checked) .product__image--silverMicrophoneAlternateView,
+.product__gallery:has(#silverMicrophoneShockMount:checked) .product__image--silverMicrophoneShockMount,
+.product__gallery:has(#silverMicrophonePopFilter:checked) .product__image--silverMicrophonePopFilter,
+.product__gallery:has(#silverMicrophoneConnections:checked) .product__image--silverMicrophoneConnections {
+    display: block;
+}
+
+/* Hides images that do not match the selected microphone color */
+.product__layout:has(#colorBlack:checked) .product__image--silver,
+.product__layout:has(#colorSilver:checked) .product__image--black {
+    display: none;
+}
+
+/* Thumbnail layout */
+.product__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+    min-width: 0;
+    margin: 12px 0 0;
+    padding: 0;
+    border: none;
+}
+
+/* Hide legends and radio buttons while keeping them accessible */
+.product__thumbnails legend,
+.product__thumbnails input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Thumbnail appearance */
+.product__thumbnails label {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.product__thumbnails label img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* Hightlight the selected thumbnail */
+.product__thumbnails input:focus-visible + label {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 2px;
+}
+
+/* Highlight thumbnails when navigating with the keyboard */
+.product__thumbnails input:focus-visible + label {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 2px;
+}
+
+/* Hide silver thumbnails by default */
+.product__thumbnails--silver {
+    display: none;
+}
+
+/* Switch thumbnail groups when Silver is selected */
+.product__layout:has(#colorSilver:checked) .product__thumbnails--black {
+    display: none;
+}
+.product__layout:has(#colorSilver:checked) .product__thumbnails--silver {
+    display: grid;
+}
+
+
+/* When the screen width is 600px or less, the header is centered,
+the logo is resized, and the product layout changes to a single column,
+and the thumbnails are arranged in four columns. */
 @media (max-width: 600px) {
     .siteHeader__content {
         flex-wrap: wrap;
@@ -81,5 +194,12 @@ img {
     }
     .siteHeader__brand img {
         width: 135px;
+    }
+    .product__layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .product__thumbnails {
+        grid-template-columns: repeat(4, minmax(0, ifr));
     }
 }
