@@ -1,0 +1,38 @@
+/* Color variables */
+:root {
+    --colorBackground: #120f1c;
+    --colorSurface: #211a30;
+    --colorText: #f5f2fa;
+    --colorMuted: #b6adc7;
+    --colorAccent: #c4b5fd;
+    --colorBorder: #443952;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", "Roboto", "Arial", "Helvetica", sans-serif;
+    line-height: 1.6;
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
