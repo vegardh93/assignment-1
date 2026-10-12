@@ -8,6 +8,7 @@
     --colorBorder: #443952;
 }
 
+/* Global styles */
 * {
     box-sizing: border-box;
 }
@@ -35,4 +36,39 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Header */
+.siteHeader {
+    border-bottom 1px solid var(--colorBorder);
+}
+
+.siteHeader__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* Header logo */
+.siteHeader__brand img {
+    width: 240px;
+    height: auto;
+}
+
+/* Header navigation */
+.siteHeader__nav {
+    display: flex;
+    gap: 24px;
+}
+
+.siteHeader__nav a {
+    color: var(--colorText);
+    text-decoration: none;
+}
+
+.siteHeader__nav a:hover {
+    color: var (--colorAccent)
 }
