@@ -72,3 +72,14 @@ img {
 .siteHeader__nav a:hover {
     color: var (--colorAccent)
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+    .siteHeader__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .siteHeader__brand img {
+        width: 135px;
+    }
+}
