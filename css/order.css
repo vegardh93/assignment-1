@@ -26,3 +26,25 @@
     display: grid;
     gap: 24px;
 }
+
+/* Order form fieldsets */
+.order__colors,
+.order__customerInformation,
+.order__shippingInformation {
+    min-width: 0;
+    margin: 0;
+    padding: 20px 24px 24px;
+    border: 1px solid var(--colorBorder);
+    border-radius: 8px;
+    background-color: var(--colorSurface);
+}
+
+/* Order form legends */
+.order__colors legend,
+.order__customerInformation legend,
+.order__shippingInformation legend {
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--colorText);
+}
