@@ -307,6 +307,42 @@ img {
     margin-bottom: 0;
 }
 
+/* Key features section */
+.keyFeatures {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+/* Key features title */
+.keyFeatures h2 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+/* Key features list */
+.keyFeatures ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+/* Key features list items */
+.keyFeatures li {
+    margin-bottom: 16px;
+    color: var(--colorMuted);
+}
+
+/* Remove bottom margin from the last list item */
+.keyFeatures li:last-child {
+    margin-bottom: 0;
+}
+
+/* Highlight feature named */
+.keyFeatures strong {
+    color: var(--colortext);
+}
 
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
