@@ -208,6 +208,56 @@ img {
     font-weight: 700;
 }
 
+/* Product color selection */
+.product__colors {
+    margin: 0 0 24px;
+    padding: 0;
+    border: none;
+}
+
+.product__colors legend {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Color options */
+.product__colorOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Hide radio buttons while keeping them functional */
+.product__colorOptions input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Color option buttons */
+.product__colorOptions label {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1åx solid var(--colorBorder);
+    border-radius: 6px;
+    background-color: var(--colorSurface);
+    color: var(--colorText);
+    cursor: pointer;
+}
+
+/* Highlight the selected color */
+.product__colorOptions input:checked + label {
+    background-color: var(--colorAccent);
+    color: var(--colorBackground);
+    border-color: var(--colorAccent);
+}
+
+/* Hightlight keyboard focus */
+.product__colorOptions input:focus-visible + label {
+    outline: 2px solid var (--colorAccent);
+    outline-offset: 3px;
+}
 
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
