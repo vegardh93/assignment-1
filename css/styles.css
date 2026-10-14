@@ -380,6 +380,20 @@ img {
     border-bottom: none;
 }
 
+/* Footer */
+.siteFooter {
+    padding: 40px 0;
+}
+
+/* Footer disclaimer */
+.siteFooter__disclaimer {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--colorMuted);
+    font-size: 14px;
+    text-align: center;
+}
+
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
 and the thumbnails are arranged in four columns. */
