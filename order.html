@@ -71,6 +71,15 @@
                             <input type="text" id="shippingCountry" name="country" autocomplete="country-name" required>
                         </div>
                     </fieldset>
+                    <!-- Additional order notes -->
+                    <div class="order__field">
+                        <label for="orderNotes">Order Notes (optional)</label>
+                        <textarea if="orderNotes" name="orderNotes" rows="4"></textarea>
+                    </div>
+                    <!-- Submit order -->
+                    <div class="order__actions">
+                        <button type="submit" class="order__submitButton">Place Order</button>
+                    </div>
                 </form>
             </div>
         </section>
