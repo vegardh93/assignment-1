@@ -138,3 +138,28 @@
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
+
+/* Order submit button */
+.order__submitButton {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--colorAccent);
+    color: var(--colorBackground);
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+.order__submitButton:hover {
+    background-color: var(--colorText);
+}
+
+/* Highlight keyboard focus */
+.order__submitButton:focus-visible {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 3px;
+}
