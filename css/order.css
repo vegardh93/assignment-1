@@ -99,3 +99,42 @@
     outline: 2px solid var(--colorAccent);
     outline-offset: 2px;
 }
+
+/* Order color options */
+.order__colorOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Hide radio buttons while keeping them accessible */
+.order__colorOptions input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Color option buttons */
+.order__colorOptions label {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid var(--colorBorder);
+    border-radius: 6px;
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    cursor: pointer;
+}
+
+/* Highlight the selected color */
+.order__colorOptions input:checked + label {
+    background-color: var(--colorAccent);
+    color: var(--colorBackground);
+    border-color: var(--colorAccent);
+}
+
+/* Highlight keyboard focus */
+.order__colorOptions input:focus-visible + label {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 3px;
+}
