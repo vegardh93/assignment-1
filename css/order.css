@@ -48,3 +48,54 @@
     font-weight: 600;
     color: var(--colorText);
 }
+
+/* Form field layout */
+.order__field,
+.order__quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Spacing between form fields */
+.order__customerInformation .order__field:not(:last-child),
+.order__shippingInformation .order__field:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* Form field labels */
+.order__field label,
+.order__quantity label {
+    font-weight: 600;
+}
+
+/* Form inputs and textarea */
+.order__field input,
+.order__quantity input,
+.order__field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--colorBorder);
+    border-radius: 6px;
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    font: inherit;
+}
+
+/* Quantity input width */
+.order__quantity input {
+    max-width: 120px;
+}
+
+/* Allow vertical resizing of order notes */
+.order__field textarea {
+    resize: vertical;
+}
+
+/* Highlight keyboard focus */
+.order__field input:focus-visible,
+.order__quantity input:focus-visible,
+.order__field textarea:focus-visible {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 2px;
+}
