@@ -33,6 +33,25 @@
                         <label for="orderQuantity">Quantity</label>
                         <input type="number" id="orderQuantity" name="orderQuantity" min="1" value="1" required>
                     </div>
+                    <!-- Customer information -->
+                    <fieldset class="order__customerInformation">
+                        <legend>Customer Information</legend>
+                        <!-- Full name -->
+                        <div class="order__field">
+                            <label for="customerFullName">Full name</label>
+                            <input type="text" id="customerFullName" name="fullName" autocomplete="name" required>
+                        </div>
+                        <!-- Email address -->
+                        <div class="order__field">
+                            <label for="customerEmail">Email address</label>
+                            <input type="email" id="customerEmail" name="email" autocomplete="email" required>
+                        </div>
+                        <!-- Phone number -->
+                        <div class="order__field">
+                            <label for="customerPhone">Phone number</label>
+                            <input type="tel" id="customerPhone" name="phone" autocomplete="tel">
+                        </div>
+                    </fieldset>
                 </form>
             </div>
         </section>
