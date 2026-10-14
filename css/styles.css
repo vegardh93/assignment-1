@@ -40,7 +40,7 @@ img {
 
 /* Header */
 .siteHeader {
-    border-bottom 1px solid var(--colorBorder);
+    border-bottom: 1px solid var(--colorBorder);
 }
 
 .siteHeader__content {
@@ -281,6 +281,32 @@ img {
     outline: 2px solid var (--colorAccent);
     outline-offset: 3px;
 }
+
+/* Product overview section */
+.productOverview {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+/* Product overview title */
+.productOverview__title {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+/* Product overview description */
+.productOverview__description {
+    margin: 0 0 16px;
+    color: var(--colorMuted);
+}
+
+/* Remove bottom margin from the last paragraph */
+.productOverview__description:last-child {
+    margin-bottom: 0;
+}
+
 
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
