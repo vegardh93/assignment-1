@@ -344,6 +344,54 @@ img {
     color: var(--colortext);
 }
 
+/* Technical specifications section */
+.technicalSpecifications {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+/* Technical specifications title */
+.technicalSpecifications h2 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+/* Technical specifications list */
+.technicalSpecifications__list {
+    margin: 0;
+}
+
+/* Technical specifications rows */
+.technicalSpecifications__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+/* Technical specifications labels */
+.technicalSpecifications__row dt {
+    font-weight: 600;
+    color: var(--colorText);
+}
+
+/* Technical specifications values */
+.technicalSpecifications__row dd {
+    margin: 0;
+    color: var(--colorMuted);
+    text-align: right;
+}
+
+/* Remove bottom border from the last row */
+.technicalSpecifications__row:last-child {
+    border-bottom: none;
+}
+
+
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
 and the thumbnails are arranged in four columns. */
