@@ -255,6 +255,29 @@ img {
 
 /* Hightlight keyboard focus */
 .product__colorOptions input:focus-visible + label {
+    outline: 2px solid var(--colorAccent);
+    outline-offset: 3px;
+}
+
+/* Product order button */
+.product__orderButton {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: var(--colorAccent);
+    color: var(--colorBackground);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Order button hover effect */
+.product__orderButton:hover {
+    background-color: var(--colorText);
+}
+
+/* Highlight keyboard focus */
+.product__colorButton:focus-visible {
     outline: 2px solid var (--colorAccent);
     outline-offset: 3px;
 }
