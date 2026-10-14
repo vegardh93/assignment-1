@@ -16,6 +16,24 @@
                 <p class="order__description">
                     Configure your RØDE NT1 5th Generation microphone and enter your order details below.
                 </p>
+                <!-- Order form -->
+                <form class="order__form">
+                    <!-- Microphone color selection -->
+                    <fieldset class="order__colors">
+                        <legend>Choose a color</legend>
+                        <div class="order__colorOptions">
+                            <input type="radio" id="orderColorBlack" name="orderColor" value="black" checked>
+                            <label for="orderColorBlack">Black</label>
+                            <input type="radio" id="orderColorSilver" name="orderColor" value="silver">
+                            <label for="orderColorSilver">Silver</label>
+                        </div>
+                    </fieldset>
+                    <!-- Product quantity -->
+                    <div class="order__quantity">
+                        <label for="orderQuantity">Quantity</label>
+                        <input type="number" id="orderQuantity" name="orderQuantity" min="1" value="1" required>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
