@@ -163,3 +163,25 @@
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
+
+/* When the screen width is 600px or less, reduce spacing,
+resize the order title, and make the submit button full width. */
+@media (max-width: 600px) {
+    .order {
+        padding: 32px 0 48px;
+    }
+    .order__title {
+        font-size: 28px;
+    }
+    .order__form {
+        gap: 20px;
+    }
+    .order__colors,
+    .order__customerInformation,
+    .order__shippingInformation {
+        padding: 16px;
+    }
+    .order__submitButton {
+        width: 100%
+    }
+}
