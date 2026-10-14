@@ -183,9 +183,34 @@ img {
     display: grid;
 }
 
+/* Product information */
+.product__information {
+    min-width: 0;
+}
+
+/* Product title */
+.product__title {
+    margin: 0 0 16px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+/* Product description */
+.product__description {
+    margin: 0 0 24px;
+    color: var(--colorMuted);
+}
+
+/* Product price */
+.product__price {
+    margin: 24px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
 
 /* When the screen width is 600px or less, the header is centered,
-the logo is resized, and the product layout changes to a single column,
+the logo and product title are resized, the product layout changes to a single column,
 and the thumbnails are arranged in four columns. */
 @media (max-width: 600px) {
     .siteHeader__content {
@@ -201,5 +226,8 @@ and the thumbnails are arranged in four columns. */
     }
     .product__thumbnails {
         grid-template-columns: repeat(4, minmax(0, ifr));
+    }
+    .product__title {
+        font-size: 28px;
     }
 }
