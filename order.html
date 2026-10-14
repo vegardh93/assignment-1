@@ -52,6 +52,25 @@
                             <input type="tel" id="customerPhone" name="phone" autocomplete="tel">
                         </div>
                     </fieldset>
+                    <!-- Shipping information -->
+                    <fieldset class="order__shippingInformation">
+                        <legend>Shipping Information</legend>
+                        <!-- Street address -->
+                        <div class="order__field">
+                            <label for="shippingStreetAddress">Street address</label>
+                            <input type="text" id="shippingStreetAddress" name="streetAddress" name="streetAddress" required>
+                        </div>
+                        <!-- City -->
+                        <div class="order__field">
+                            <label for="shippingCity">City</label>
+                            <input type="text" id="shippingCity" name="city" autocomplete="address-level2" required>
+                        </div>
+                        <!-- Country -->
+                        <div class="order__field">
+                            <label for="shippingCountry">Country</label>
+                            <input type="text" id="shippingCountry" name="country" autocomplete="country-name" required>
+                        </div>
+                    </fieldset>
                 </form>
             </div>
         </section>
