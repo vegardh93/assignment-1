@@ -1,0 +1,28 @@
+/* Order section */
+.order {
+    padding: 48px 0 64px;
+}
+
+/* Order container */
+.order .container {
+    max-width: 800px;
+}
+
+/* Order title */
+.order__title {
+    margin: 0 0 12px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+/* Order description */
+.order__description {
+    margin: 0 0 32px;
+    color: var(--colorMuted);
+}
+
+/* Order form */
+.order__form {
+    display: grid;
+    gap: 24px;
+}
