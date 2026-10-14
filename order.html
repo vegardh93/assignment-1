@@ -8,11 +8,26 @@
     <link rel="stylesheet" href="./css/order.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="siteHeader">
+        <div class="container siteHeader__content">
+            <!-- Logo -->
+             <a class="siteHeader__brand" href="./index.html">
+                <img src="./assets/rode-microphones-logo.webp" alt="Røde Microphones logo">
+             </a>
+            <!-- Navigation -->
+            <nav class="siteHeader__nav" aria-label="Main navigation">
+                <a href="./index.html">Product</a>
+                <a href="./index.html#details">Details</a>
+                <a href="./order.html">Order</a>
+            </nav>
+        </div>
+    </header>
     <!-- Order page -->
     <main>
         <section class="order">
             <div class="container">
-                <h1 class="order__title">Order Your Røde NT1</h1>
+                <h1 class="order__title">Order Your RØDE NT1</h1>
                 <p class="order__description">
                     Configure your RØDE NT1 5th Generation microphone and enter your order details below.
                 </p>
@@ -58,7 +73,12 @@
                         <!-- Street address -->
                         <div class="order__field">
                             <label for="shippingStreetAddress">Street address</label>
-                            <input type="text" id="shippingStreetAddress" name="streetAddress" name="streetAddress" required>
+                            <input type="text" id="shippingStreetAddress" name="streetAddress" required>
+                        </div>
+                        <!-- Postal code -->
+                        <div class="order__field">
+                            <label for="shippingPostalCode">Postal code</label>
+                            <input type="text" id="shippingPostalCode" name="postalCode" autocomplete="postal-code" required>
                         </div>
                         <!-- City -->
                         <div class="order__field">
@@ -74,15 +94,24 @@
                     <!-- Additional order notes -->
                     <div class="order__field">
                         <label for="orderNotes">Order Notes (optional)</label>
-                        <textarea if="orderNotes" name="orderNotes" rows="4"></textarea>
+                        <textarea id="orderNotes" name="orderNotes" rows="4"></textarea>
                     </div>
                     <!-- Submit order -->
                     <div class="order__actions">
-                        <button type="submit" class="order__submitButton">Place Order</button>
+                        <button type="button" class="order__submitButton">Place Order</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
+    <!-- Footer -->
+    <footer class="siteFooter">
+        <div class="container">
+            <p class="siteFooter__disclaimer">
+                This website is a student project created for educational purposes.
+                It is not an official RØDE website and is not affiliated with or endorsed by RØDE.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
