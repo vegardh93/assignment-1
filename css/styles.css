@@ -70,7 +70,7 @@ img {
 }
 
 .siteHeader__nav a:hover {
-    color: var (--colorAccent)
+    color: var(--colorAccent);
 }
 
 /* Product section */
@@ -158,10 +158,9 @@ img {
     object-fit: cover;
 }
 
-/* Hightlight the selected thumbnail */
-.product__thumbnails input:focus-visible + label {
-    outline: 2px solid var(--colorAccent);
-    outline-offset: 2px;
+/* Highlight the selected thumbnail */
+.product__thumbnails input:checked + label {
+    border-color: var(--colorAccent);
 }
 
 /* Highlight thumbnails when navigating with the keyboard */
@@ -179,6 +178,7 @@ img {
 .product__layout:has(#colorSilver:checked) .product__thumbnails--black {
     display: none;
 }
+
 .product__layout:has(#colorSilver:checked) .product__thumbnails--silver {
     display: grid;
 }
@@ -239,7 +239,7 @@ img {
 .product__colorOptions label {
     display: inline-block;
     padding: 10px 22px;
-    border: 1åx solid var(--colorBorder);
+    border: 1px solid var(--colorBorder);
     border-radius: 6px;
     background-color: var(--colorSurface);
     color: var(--colorText);
@@ -253,7 +253,7 @@ img {
     border-color: var(--colorAccent);
 }
 
-/* Hightlight keyboard focus */
+/* Highlight keyboard focus */
 .product__colorOptions input:focus-visible + label {
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
@@ -277,86 +277,75 @@ img {
 }
 
 /* Highlight keyboard focus */
-.product__colorButton:focus-visible {
-    outline: 2px solid var (--colorAccent);
+.product__orderButton:focus-visible {
+    outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
 
-/* Product overview section */
-.productOverview {
+/* Shared layout for product detail sections */
+.productOverview,
+.keyFeatures,
+.technicalSpecifications,
+.boxContents,
+.availableColors {
     max-width: 800px;
     margin: 0 auto;
     padding: 48px 20px;
 }
 
-/* Product overview title */
-.productOverview__title {
+/* Section dividers */
+.keyFeatures,
+.technicalSpecifications,
+.boxContents,
+.availableColors {
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+/* Section titles */
+.productOverview__title,
+.keyFeatures h2,
+.technicalSpecifications h2,
+.boxContents h2,
+.availableColors h2 {
     margin: 0 0 20px;
     font-size: 30px;
     line-height: 1.2;
 }
 
-/* Product overview description */
-.productOverview__description {
+/* Section descriptions */
+.productOverview__description,
+.availableColors p {
     margin: 0 0 16px;
     color: var(--colorMuted);
 }
 
-/* Remove bottom margin from the last paragraph */
-.productOverview__description:last-child {
-    margin-bottom: 0;
-}
-
-/* Key features section */
-.keyFeatures {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 20px;
-    border-bottom: 1px solid var(--colorBorder);
-}
-
-/* Key features title */
-.keyFeatures h2 {
-    margin: 0 0 20px;
-    font-size: 30px;
-    line-height: 1.2;
-}
-
-/* Key features list */
-.keyFeatures ul {
+/* Section lists */
+.keyFeatures ul,
+.boxContents ul,
+.availableColors ul {
     margin: 0;
     padding-left: 24px;
 }
 
-/* Key features list items */
-.keyFeatures li {
+/* Section list items */
+.keyFeatures li,
+.boxContents li,
+.availableColors li {
     margin-bottom: 16px;
     color: var(--colorMuted);
 }
 
-/* Remove bottom margin from the last list item */
-.keyFeatures li:last-child {
-    margin-bottom: 0;
-}
-
-/* Highlight feature named */
+/* Highlight feature names */
 .keyFeatures strong {
-    color: var(--colortext);
+    color: var(--colorText);
 }
 
-/* Technical specifications section */
-.technicalSpecifications {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 20px;
-    border-bottom: 1px solid var(--colorBorder);
-}
-
-/* Technical specifications title */
-.technicalSpecifications h2 {
-    margin: 0 0 20px;
-    font-size: 30px;
-    line-height: 1.2;
+/* Remove bottom margin from the last paragraph or list item */
+.productOverview__description:last-child,
+.keyFeatures li:last-child,
+.boxContents li:last-child,
+.availableColors li:last-child {
+    margin-bottom: 0;
 }
 
 /* Technical specifications list */
@@ -391,76 +380,6 @@ img {
     border-bottom: none;
 }
 
-/* Box contents section */
-.boxContents {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 20px;
-    border-bottom: 1px solid var (--colorBorder);
-}
-
-/* Box contents title */
-.boxContents h2 {
-    margin: 0 0 20px;
-    font-size: 30px;
-    line-height: 1.2;
-}
-
-/* Box contents list */
-.boxContents ul {
-    margin: 0;
-    padding-left: 24px;
-}
-
-/* Box contents list items */
-.boxContents li {
-    margin-bottom: 16px;
-    color: var(--colorMuted);
-}
-
-/* Remove bottom margin from the last list item */
-.boxContents li:last-child {
-    margin-bottom: 0;
-}
-
-/* Available colors section */
-.availableColors {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 20px;
-    border-bottom: 1px solid var(--colorBorder);
-}
-
-/* Available colors title */
-.availableColors h2 {
-    margin: 0 0 20px;
-    font-size: 30px;
-    line-height: 1.2;
-}
-
-/* Available colors description */
-.availableColors p {
-    margin: 0 0 16px;
-    Color: var(--colorMuted);
-}
-
-/* Available colors list */
-.availableColors ul {
-    margin: 0;
-    padding-left: 24px;
-}
-
-/* Available colors list items */
-.availableColors li {
-    margin-bottom: 16px;
-    color: var(--colorMuted);
-}
-
-/* Remove bottom margin from the last list item */
-.availableColors li:list-child {
-    margin-bottom: 0;
-}
-
 /* When the screen width is 600px or less, the header is centered,
 the logo and product title are resized, the product layout changes to a single column,
 and the thumbnails are arranged in four columns. */
@@ -477,7 +396,7 @@ and the thumbnails are arranged in four columns. */
         gap: 24px;
     }
     .product__thumbnails {
-        grid-template-columns: repeat(4, minmax(0, ifr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .product__title {
         font-size: 28px;
