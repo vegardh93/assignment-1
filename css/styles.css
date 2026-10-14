@@ -1,11 +1,11 @@
 /* Color variables */
 :root {
-    --colorBackground: #120f1c;
-    --colorSurface: #211a30;
-    --colorText: #f5f2fa;
-    --colorMuted: #b6adc7;
-    --colorAccent: #c4b5fd;
-    --colorBorder: #443952;
+    --colorBackground: #000000;
+    --colorSurface: #161616;
+    --colorText: #FFFFFF;
+    --colorMuted: #B8B8B8;
+    --colorAccent: #B2985B;
+    --colorBorder: #3c3529;
 }
 
 /* Global styles */
