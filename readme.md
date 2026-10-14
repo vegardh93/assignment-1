@@ -12,7 +12,7 @@ https://github.com/vegardh93/assignment-1
 
 ## Website
 
-[Link to website]
+https://vegardh93.github.io/assignment-1/
 
 ## Disclaimer
 
