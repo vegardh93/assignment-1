@@ -1,44 +1,23 @@
-/* Color variables */
-:root {
-    --colorBackground: #000000;
-    --colorSurface: #161616;
-    --colorText: #FFFFFF;
-    --colorMuted: #B8B8B8;
-    --colorAccent: #B2985B;
-    --colorBorder: #3c3529;
-}
-
-/* Global styles */
-* {
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
+/* Body */
 body {
-    margin: 0;
     font-family: "Inter", "Segoe UI", "Roboto", "Arial", "Helvetica", sans-serif;
     line-height: 1.6;
     background-color: var(--colorBackground);
     color: var(--colorText);
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Container */
+/* Container. */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
+/* Header. */
 .siteHeader {
     border-bottom: 1px solid var(--colorBorder);
 }
@@ -52,13 +31,13 @@ img {
     padding-bottom: 16px;
 }
 
-/* Header logo */
+/* Header logo. */
 .siteHeader__brand img {
     width: 240px;
     height: auto;
 }
 
-/* Header navigation */
+/* Header navigation. */
 .siteHeader__nav {
     display: flex;
     gap: 24px;
@@ -73,7 +52,7 @@ img {
     color: var(--colorAccent);
 }
 
-/* Product section */
+/* Product section. */
 .product {
     padding: 48px 0;
 }
@@ -85,13 +64,13 @@ img {
     align-items: start;
 }
 
-/* Product gallery */
+/* Product gallery. */
 .product__gallery {
     min-width: 0;
     align-self: center;
 }
 
-/* Hide all main images by default */
+/* Hide all main images by default. */
 .product__image {
     display: none;
     width: 100%;
@@ -99,7 +78,7 @@ img {
     border-radius: 8px;
 }
 
-/* Display the main image which corresponds to the selected thumbnail */
+/* Display the main image which corresponds to the selected thumbnail. */
 .product__gallery:has(#blackProductOverview:checked) .product__image--blackProductOverview,
 .product__gallery:has(#blackMicrophoneWithAccessories:checked) .product__image--blackMicrophoneWithAccessories,
 .product__gallery:has(#blackMicrophoneSideView:checked) .product__image--blackMicrophoneSideView,
@@ -117,13 +96,13 @@ img {
     display: block;
 }
 
-/* Hides images that do not match the selected microphone color */
+/* Hides images that do not match the selected microphone color. */
 .product__layout:has(#colorBlack:checked) .product__image--silver,
 .product__layout:has(#colorSilver:checked) .product__image--black {
     display: none;
 }
 
-/* Thumbnail layout */
+/* Thumbnail layout. */
 .product__thumbnails {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -134,7 +113,7 @@ img {
     border: none;
 }
 
-/* Hide legends and radio buttons while keeping them accessible */
+/* Hide legends and radio buttons while keeping them accessible. */
 .product__thumbnails legend,
 .product__thumbnails input {
     position: absolute;
@@ -144,7 +123,7 @@ img {
     opacity: 0;
 }
 
-/* Thumbnail appearance */
+/* Thumbnail appearance. */
 .product__thumbnails label {
     cursor: pointer;
     border: 2px solid transparent;
@@ -158,23 +137,23 @@ img {
     object-fit: cover;
 }
 
-/* Highlight the selected thumbnail */
+/* Highlight the selected thumbnail. */
 .product__thumbnails input:checked + label {
     border-color: var(--colorAccent);
 }
 
-/* Highlight thumbnails when navigating with the keyboard */
+/* Highlight thumbnails when navigating with the keyboard. */
 .product__thumbnails input:focus-visible + label {
     outline: 2px solid var(--colorAccent);
     outline-offset: 2px;
 }
 
-/* Hide silver thumbnails by default */
+/* Hide silver thumbnails by default. */
 .product__thumbnails--silver {
     display: none;
 }
 
-/* Switch thumbnail groups when Silver is selected */
+/* Switch thumbnail groups when Silver is selected. */
 .product__layout:has(#colorSilver:checked) .product__thumbnails--black {
     display: none;
 }
@@ -183,32 +162,32 @@ img {
     display: grid;
 }
 
-/* Product information */
+/* Product information. */
 .product__information {
     min-width: 0;
 }
 
-/* Product title */
+/* Product title. */
 .product__title {
     margin: 0 0 16px;
     font-size: 36px;
     line-height: 1.2;
 }
 
-/* Product description */
+/* Product description. */
 .product__description {
     margin: 0 0 24px;
     color: var(--colorMuted);
 }
 
-/* Product price */
+/* Product price. */
 .product__price {
     margin: 24px 0;
     font-size: 28px;
     font-weight: 700;
 }
 
-/* Product color selection */
+/* Product color selection. */
 .product__colors {
     margin: 0 0 24px;
     padding: 0;
@@ -220,14 +199,14 @@ img {
     font-weight: 600;
 }
 
-/* Color options */
+/* Color options. */
 .product__colorOptions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-/* Hide radio buttons while keeping them functional */
+/* Hide radio buttons while keeping them functional. */
 .product__colorOptions input {
     position: absolute;
     opacity: 0;
@@ -235,7 +214,7 @@ img {
     height: 1px;
 }
 
-/* Color option buttons */
+/* Color option buttons. */
 .product__colorOptions label {
     display: inline-block;
     padding: 10px 22px;
@@ -246,20 +225,20 @@ img {
     cursor: pointer;
 }
 
-/* Highlight the selected color */
+/* Highlight the selected color. */
 .product__colorOptions input:checked + label {
     background-color: var(--colorAccent);
     color: var(--colorBackground);
     border-color: var(--colorAccent);
 }
 
-/* Highlight keyboard focus */
+/* Highlight keyboard focus. */
 .product__colorOptions input:focus-visible + label {
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
 
-/* Product order button */
+/* Product order button. */
 .product__orderButton {
     display: inline-block;
     padding: 12px 24px;
@@ -271,18 +250,18 @@ img {
     text-decoration: none;
 }
 
-/* Order button hover effect */
+/* Order button hover effect. */
 .product__orderButton:hover {
     background-color: var(--colorText);
 }
 
-/* Highlight keyboard focus */
+/* Highlight keyboard focus. */
 .product__orderButton:focus-visible {
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
 
-/* Shared layout for product detail sections */
+/* Shared layout for product detail sections. */
 .productOverview,
 .keyFeatures,
 .technicalSpecifications,
@@ -293,7 +272,7 @@ img {
     padding: 48px 20px;
 }
 
-/* Section dividers */
+/* Section dividers. */
 .keyFeatures,
 .technicalSpecifications,
 .boxContents,
@@ -301,7 +280,7 @@ img {
     border-bottom: 1px solid var(--colorBorder);
 }
 
-/* Section titles */
+/* Section titles. */
 .productOverview__title,
 .keyFeatures h2,
 .technicalSpecifications h2,
@@ -312,14 +291,14 @@ img {
     line-height: 1.2;
 }
 
-/* Section descriptions */
+/* Section descriptions. */
 .productOverview__description,
 .availableColors p {
     margin: 0 0 16px;
     color: var(--colorMuted);
 }
 
-/* Section lists */
+/* Section lists. */
 .keyFeatures ul,
 .boxContents ul,
 .availableColors ul {
@@ -327,7 +306,7 @@ img {
     padding-left: 24px;
 }
 
-/* Section list items */
+/* Section list items. */
 .keyFeatures li,
 .boxContents li,
 .availableColors li {
@@ -335,12 +314,12 @@ img {
     color: var(--colorMuted);
 }
 
-/* Highlight feature names */
+/* Highlight feature names. */
 .keyFeatures strong {
     color: var(--colorText);
 }
 
-/* Remove bottom margin from the last paragraph or list item */
+/* Remove bottom margin from the last paragraph or list item. */
 .productOverview__description:last-child,
 .keyFeatures li:last-child,
 .boxContents li:last-child,
@@ -348,12 +327,12 @@ img {
     margin-bottom: 0;
 }
 
-/* Technical specifications list */
+/* Technical specifications list. */
 .technicalSpecifications__list {
     margin: 0;
 }
 
-/* Technical specifications rows */
+/* Technical specifications rows. */
 .technicalSpecifications__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -362,30 +341,30 @@ img {
     border-bottom: 1px solid var(--colorBorder);
 }
 
-/* Technical specifications labels */
+/* Technical specifications labels. */
 .technicalSpecifications__row dt {
     font-weight: 600;
     color: var(--colorText);
 }
 
-/* Technical specifications values */
+/* Technical specifications values. */
 .technicalSpecifications__row dd {
     margin: 0;
     color: var(--colorMuted);
     text-align: right;
 }
 
-/* Remove bottom border from the last row */
+/* Remove bottom border from the last row. */
 .technicalSpecifications__row:last-child {
     border-bottom: none;
 }
 
-/* Footer */
+/* Footer. */
 .siteFooter {
     padding: 40px 0;
 }
 
-/* Footer disclaimer */
+/* Footer disclaimer. */
 .siteFooter__disclaimer {
     max-width: 800px;
     margin: 0 auto;

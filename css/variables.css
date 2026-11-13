@@ -1,0 +1,9 @@
+/* Color variables. */
+:root {
+    --colorBackground: #000000;
+    --colorSurface: #161616;
+    --colorText: #FFFFFF;
+    --colorMuted: #B8B8B8;
+    --colorAccent: #B2985B;
+    --colorBorder: #3c3529;
+}

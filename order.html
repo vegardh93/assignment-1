@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order | RØDE NT1 5th Generation</title>
-    <!-- Google Fonts-->
+    <!-- Google Fonts. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/order.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header. -->
     <header class="siteHeader">
         <div class="container siteHeader__content">
-            <!-- Logo -->
+            <!-- Logo. -->
              <a class="siteHeader__brand" href="./index.html">
                 <img src="./assets/rode-microphones-logo.webp" alt="Røde Microphones logo">
              </a>
-            <!-- Navigation -->
+            <!-- Navigation. -->
             <nav class="siteHeader__nav" aria-label="Main navigation">
                 <a href="./index.html">Product</a>
                 <a href="./index.html#details">Details</a>
@@ -27,7 +29,7 @@
             </nav>
         </div>
     </header>
-    <!-- Order page -->
+    <!-- Order page. -->
     <main>
         <section class="order">
             <div class="container">
@@ -35,9 +37,9 @@
                 <p class="order__description">
                     Configure your RØDE NT1 5th Generation microphone and enter your order details below.
                 </p>
-                <!-- Order form -->
+                <!-- Order form. -->
                 <form class="order__form">
-                    <!-- Microphone color selection -->
+                    <!-- Microphone color selection. -->
                     <fieldset class="order__colors">
                         <legend>Choose a color</legend>
                         <div class="order__colorOptions">
@@ -47,60 +49,60 @@
                             <label for="orderColorSilver">Silver</label>
                         </div>
                     </fieldset>
-                    <!-- Product quantity -->
+                    <!-- Product quantity. -->
                     <div class="order__quantity">
                         <label for="orderQuantity">Quantity</label>
                         <input type="number" id="orderQuantity" name="orderQuantity" min="1" value="1" required>
                     </div>
-                    <!-- Customer information -->
+                    <!-- Customer information. -->
                     <fieldset class="order__customerInformation">
                         <legend>Customer Information</legend>
-                        <!-- Full name -->
+                        <!-- Full name. -->
                         <div class="order__field">
                             <label for="customerFullName">Full name</label>
                             <input type="text" id="customerFullName" name="fullName" autocomplete="name" required>
                         </div>
-                        <!-- Email address -->
+                        <!-- Email address. -->
                         <div class="order__field">
                             <label for="customerEmail">Email address</label>
                             <input type="email" id="customerEmail" name="email" autocomplete="email" required>
                         </div>
-                        <!-- Phone number -->
+                        <!-- Phone number. -->
                         <div class="order__field">
                             <label for="customerPhone">Phone number</label>
                             <input type="tel" id="customerPhone" name="phone" autocomplete="tel">
                         </div>
                     </fieldset>
-                    <!-- Shipping information -->
+                    <!-- Shipping information. -->
                     <fieldset class="order__shippingInformation">
                         <legend>Shipping Information</legend>
-                        <!-- Street address -->
+                        <!-- Street address. -->
                         <div class="order__field">
                             <label for="shippingStreetAddress">Street address</label>
                             <input type="text" id="shippingStreetAddress" name="streetAddress" required>
                         </div>
-                        <!-- Postal code -->
+                        <!-- Postal code. -->
                         <div class="order__field">
                             <label for="shippingPostalCode">Postal code</label>
                             <input type="text" id="shippingPostalCode" name="postalCode" autocomplete="postal-code" required>
                         </div>
-                        <!-- City -->
+                        <!-- City. -->
                         <div class="order__field">
                             <label for="shippingCity">City</label>
                             <input type="text" id="shippingCity" name="city" autocomplete="address-level2" required>
                         </div>
-                        <!-- Country -->
+                        <!-- Country. -->
                         <div class="order__field">
                             <label for="shippingCountry">Country</label>
                             <input type="text" id="shippingCountry" name="country" autocomplete="country-name" required>
                         </div>
                     </fieldset>
-                    <!-- Additional order notes -->
+                    <!-- Additional order notes. -->
                     <div class="order__field">
                         <label for="orderNotes">Order Notes (optional)</label>
                         <textarea id="orderNotes" name="orderNotes" rows="4"></textarea>
                     </div>
-                    <!-- Submit order -->
+                    <!-- Submit order. -->
                     <div class="order__actions">
                         <button type="button" class="order__submitButton">Place Order</button>
                     </div>
@@ -108,7 +110,7 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
+    <!-- Footer. -->
     <footer class="siteFooter">
         <div class="container">
             <p class="siteFooter__disclaimer">

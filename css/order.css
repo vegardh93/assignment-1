@@ -1,33 +1,33 @@
-/* Order section */
+/* Order section. */
 .order {
     padding: 48px 0 64px;
 }
 
-/* Order container */
+/* Order container. */
 .order .container {
     max-width: 800px;
 }
 
-/* Order title */
+/* Order title. */
 .order__title {
     margin: 0 0 12px;
     font-size: 36px;
     line-height: 1.2;
 }
 
-/* Order description */
+/* Order description. */
 .order__description {
     margin: 0 0 32px;
     color: var(--colorMuted);
 }
 
-/* Order form */
+/* Order form. */
 .order__form {
     display: grid;
     gap: 24px;
 }
 
-/* Order form fieldsets */
+/* Order form fieldsets. */
 .order__colors,
 .order__customerInformation,
 .order__shippingInformation {
@@ -39,7 +39,7 @@
     background-color: var(--colorSurface);
 }
 
-/* Order form legends */
+/* Order form legends. */
 .order__colors legend,
 .order__customerInformation legend,
 .order__shippingInformation legend {
@@ -49,7 +49,7 @@
     color: var(--colorText);
 }
 
-/* Form field layout */
+/* Form field layout. */
 .order__field,
 .order__quantity {
     display: flex;
@@ -57,19 +57,19 @@
     gap: 8px;
 }
 
-/* Spacing between form fields */
+/* Spacing between form fields. */
 .order__customerInformation .order__field:not(:last-child),
 .order__shippingInformation .order__field:not(:last-child) {
     margin-bottom: 16px;
 }
 
-/* Form field labels */
+/* Form field labels. */
 .order__field label,
 .order__quantity label {
     font-weight: 600;
 }
 
-/* Form inputs and textarea */
+/* Form inputs and textarea. */
 .order__field input,
 .order__quantity input,
 .order__field textarea {
@@ -82,17 +82,17 @@
     font: inherit;
 }
 
-/* Quantity input width */
+/* Quantity input width. */
 .order__quantity input {
     max-width: 120px;
 }
 
-/* Allow vertical resizing of order notes */
+/* Allow vertical resizing of order notes. */
 .order__field textarea {
     resize: vertical;
 }
 
-/* Highlight keyboard focus */
+/* Highlight keyboard focus. */
 .order__field input:focus-visible,
 .order__quantity input:focus-visible,
 .order__field textarea:focus-visible {
@@ -100,14 +100,14 @@
     outline-offset: 2px;
 }
 
-/* Order color options */
+/* Order color options. */
 .order__colorOptions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-/* Hide radio buttons while keeping them accessible */
+/* Hide radio buttons while keeping them accessible. */
 .order__colorOptions input {
     position: absolute;
     opacity: 0;
@@ -115,7 +115,7 @@
     height: 1px;
 }
 
-/* Color option buttons */
+/* Color option buttons. */
 .order__colorOptions label {
     display: inline-block;
     padding: 10px 22px;
@@ -126,20 +126,20 @@
     cursor: pointer;
 }
 
-/* Highlight the selected color */
+/* Highlight the selected color. */
 .order__colorOptions input:checked + label {
     background-color: var(--colorAccent);
     color: var(--colorBackground);
     border-color: var(--colorAccent);
 }
 
-/* Highlight keyboard focus */
+/* Highlight keyboard focus. */
 .order__colorOptions input:focus-visible + label {
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
 }
 
-/* Order submit button */
+/* Order submit button. */
 .order__submitButton {
     display: inline-block;
     padding: 12px 24px;
@@ -153,12 +153,12 @@
     cursor: pointer;
 }
 
-/* Submit button hover effect */
+/* Submit button hover effect. */
 .order__submitButton:hover {
     background-color: var(--colorText);
 }
 
-/* Highlight keyboard focus */
+/* Highlight keyboard focus. */
 .order__submitButton:focus-visible {
     outline: 2px solid var(--colorAccent);
     outline-offset: 3px;
