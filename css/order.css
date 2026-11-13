@@ -69,9 +69,10 @@
     font-weight: 600;
 }
 
-/* Form inputs and textarea. */
+/* Form inputs, select and textarea. */
 .order__field input,
 .order__quantity input,
+.order__field select,
 .order__field textarea {
     width: 100%;
     padding: 12px 14px;
@@ -95,6 +96,7 @@
 /* Highlight keyboard focus. */
 .order__field input:focus-visible,
 .order__quantity input:focus-visible,
+.order__field select:focus-visible,
 .order__field textarea:focus-visible {
     outline: 2px solid var(--colorAccent);
     outline-offset: 2px;
